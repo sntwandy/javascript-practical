@@ -1,71 +1,67 @@
 /**
- *
- * @param { Text message } message
- * @param { Number value } value
- * @param { Value type text } valueType
+ * @param {number} squareSide
+ * @returns {number}
+ * @description Calculate the perimeter of a square
+ * @example
+ * perimeterSquare(3); // => 12
  */
-
-const print = (message, value, valueType = "") => {
-	console.log(`${message}: ${value}${valueType}`);
-};
+const squarePerimeter = (squareSide) => squareSide * 4;
 
 /**
- * Square code
+ * @param {number} squareSide
+ * @returns {number}
+ * @description Calculate the area of a square
+ * @example
+ * areaSquare(3); // => 9
  */
-
-console.group("Square");
-
-const squareSide = 5;
-
-const squarePerimeter = squareSide * 4;
-const squareArea = squareSide * squareSide;
-
-print("Square side", squareSide, "cm");
-print("Square perimeter", squarePerimeter, "cm");
-print("Square area", squareArea, "cm'2");
-
-console.groupEnd();
+const squareArea = (squareSide) => squareSide * squareSide;
 
 /**
- * Triangle code
+ * @param {number} base
+ * @param {number} height
+ * @returns {number}
+ * @description Calculate the area of a triangle
+ * @example
+ * areaTriangle(3, 4); // => 6
  */
-
-console.group("Triangle");
-
-const triangleSideOne = 6;
-const triangleSideTwo = 6;
-const baseTriangle = 4;
-const heightTriangle = 5.5;
-
-const trianglePerimeter = triangleSideOne + triangleSideTwo + baseTriangle;
-const areaTriangle = (baseTriangle * heightTriangle) / 2;
-
-print("The triangle side one is", triangleSideOne, "cm");
-print("The triangle side two is", triangleSideTwo, "cm");
-print("The base of the triangle is", baseTriangle, "cm");
-
-print("The height of the triangle is", heightTriangle, "cm");
-print("The perimeter of the triangle is", trianglePerimeter, "cm");
-print("The area of the triangle is", areaTriangle, "cm'2");
-
-console.groupEnd();
+const areaTriangle = (base, height) => (base * height) / 2;
 
 /**
- * Circle code
+ * @param {number} sideOne
+ * @param {number} sideTwo
+ * @param {number} base
+ * @returns {number}
+ * @description Calculate the perimeter of a triangle
+ * @example
+ * perimeterTriangle(3, 4, 5); // => 12
  */
-
-console.group("Circle");
+const trianglePerimeter = (sideOne, sideTwo, base) => sideOne + sideTwo + base;
 
 const PI = Math.PI;
-const radioCircle = 4;
-const diameterCircle = radioCircle * 2;
-const perimeterCircle = Math.round(PI * diameterCircle);
-const areaCircle = Math.round(PI * (radioCircle * radioCircle));
 
-print("The value of PI", PI);
-print("The radio of the circle is", radioCircle, "cm");
-print("The diameter of the circle is", diameterCircle, "cm");
-print("The perimeter of the circle is", perimeterCircle, "cm");
-print("The area of the circle is", areaCircle, "cm'2");
+/**
+ * @param {number} radio
+ * @returns {number}
+ * @description Calculate the diameter of a circle
+ * @example
+ * diameterCircle(3); // => 6
+ */
+const diameterCircle = (radio) => radioCircle * 2;
 
-console.groupEnd();
+/**
+ * @param {number} radio
+ * @returns {number}
+ * @description Calculate the circumference of a circle
+ * @example
+ * circumferenceCircle(3); // => 18.84
+ */
+const circumferenceCircle = (radio) => PI * diameterCircle(radio);
+
+/**
+ * @param {number} radio
+ * @returns {number}
+ * @description Calculate the area of a circle
+ * @example
+ * areaCircle(3); // => 28.27
+ */
+const areaCircle = (radio) => PI * (radioCircle * radioCircle);
