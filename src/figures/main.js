@@ -38,3 +38,26 @@ const areaTriangle = (baseTriangle * heightTriangle) / 2;
 console.log(`The area of the triangle is: ${areaTriangle}cm'2`);
 
 console.groupEnd();
+
+/**
+ * Circle code
+ */
+
+console.group("Circle");
+
+const PI = Math.PI;
+console.log(`PI is: ${PI}`);
+
+const radioCircle = 4;
+console.log(`The circle radio is: ${radioCircle}cm`);
+
+const diameterCircle = radioCircle * 2;
+console.log(`The diameter of the circle is: ${diameterCircle}cm`);
+
+const perimeterCircle = Math.round(PI * diameterCircle);
+console.log(`The perimeter of the circle is: ${perimeterCircle}cm`);
+
+const areaCircle = Math.round(PI * (radioCircle * radioCircle));
+console.log(`The area of the circle is: ${areaCircle}cm'2`);
+
+console.groupEnd();
